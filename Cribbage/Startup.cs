@@ -41,6 +41,7 @@ namespace Cribbage
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseLogging();
             app.UseMvc();
         }
     }
