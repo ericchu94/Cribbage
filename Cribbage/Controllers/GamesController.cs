@@ -5,31 +5,32 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
 using Cribbage.Models;
+using Cribbage.Services;
 
 namespace Cribbage.Controllers
 {
     [Route("api/[controller]")]
     public class GamesController : Controller
     {
-        private readonly CribbageContext context;
+        private readonly IGamesService gamesService;
 
-        public GamesController(CribbageContext context)
+        public GamesController(IGamesService gamesService)
         {
-            this.context = context;
+            this.gamesService = gamesService;
         }
 
         // GET api/games
         [HttpGet]
         public IActionResult Get()
         {
-            return Ok(context.Games);
+            return Ok(gamesService.GetGames());
         }
 
         // GET api/games/5
         [HttpGet("{id}")]
         public IActionResult Get(int id)
         {
-            var game = context.Games.Find(id);
+            var game = gamesService.GetGame(id);
             if (game == null)
                 return NotFound();
             return Ok(game);
@@ -39,21 +40,15 @@ namespace Cribbage.Controllers
         [HttpPost]
         public Game Post()
         {
-            var game = new Game();
-            context.Games.Add(game);
-            context.SaveChanges();
-            return game;
+            return gamesService.CreateGame();
         }
 
         // DELETE api/games/5
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
-            var game = context.Games.Find(id);
-            if (game == null)
+            if (!gamesService.DeleteGame(id))
                 return NotFound();
-            context.Games.Remove(game);
-            context.SaveChanges();
             return Ok();
         }
     }
