@@ -10,9 +10,10 @@ using System;
 namespace Cribbage.Migrations
 {
     [DbContext(typeof(CribbageContext))]
-    partial class CribbageContextModelSnapshot : ModelSnapshot
+    [Migration("20171009221731_Player")]
+    partial class Player
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
