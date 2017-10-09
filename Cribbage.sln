@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cribbage", "Cribbage\Cribbage.csproj", "{02493176-104C-41F2-A812-668DF298DAA0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cribbage.Tests", "Cribbage.Tests\Cribbage.Tests.csproj", "{0FBBBC0D-DEB5-44CB-AE0C-E08ED8C27B6B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,17 @@ Global
 		{02493176-104C-41F2-A812-668DF298DAA0}.Release|x64.Build.0 = Release|x64
 		{02493176-104C-41F2-A812-668DF298DAA0}.Release|x86.ActiveCfg = Release|x86
 		{02493176-104C-41F2-A812-668DF298DAA0}.Release|x86.Build.0 = Release|x86
+		{0FBBBC0D-DEB5-44CB-AE0C-E08ED8C27B6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FBBBC0D-DEB5-44CB-AE0C-E08ED8C27B6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FBBBC0D-DEB5-44CB-AE0C-E08ED8C27B6B}.Debug|x64.ActiveCfg = Debug|x64
+		{0FBBBC0D-DEB5-44CB-AE0C-E08ED8C27B6B}.Debug|x64.Build.0 = Debug|x64
+		{0FBBBC0D-DEB5-44CB-AE0C-E08ED8C27B6B}.Debug|x86.ActiveCfg = Debug|x86
+		{0FBBBC0D-DEB5-44CB-AE0C-E08ED8C27B6B}.Debug|x86.Build.0 = Debug|x86
+		{0FBBBC0D-DEB5-44CB-AE0C-E08ED8C27B6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FBBBC0D-DEB5-44CB-AE0C-E08ED8C27B6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FBBBC0D-DEB5-44CB-AE0C-E08ED8C27B6B}.Release|x64.ActiveCfg = Release|x64
+		{0FBBBC0D-DEB5-44CB-AE0C-E08ED8C27B6B}.Release|x64.Build.0 = Release|x64
+		{0FBBBC0D-DEB5-44CB-AE0C-E08ED8C27B6B}.Release|x86.ActiveCfg = Release|x86
+		{0FBBBC0D-DEB5-44CB-AE0C-E08ED8C27B6B}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 EndGlobal

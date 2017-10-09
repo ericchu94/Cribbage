@@ -21,9 +21,9 @@ namespace Cribbage.Controllers
 
         // GET api/games
         [HttpGet]
-        public IActionResult Get()
+        public IEnumerable<Game> Get()
         {
-            return Ok(gamesService.GetGames());
+            return gamesService.GetGames();
         }
 
         // GET api/games/5
