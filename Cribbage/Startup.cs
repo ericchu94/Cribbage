@@ -11,6 +11,7 @@ using Microsoft.Extensions.Options;
 using Microsoft.EntityFrameworkCore;
 
 using Cribbage.Models;
+using Cribbage.Services;
 
 namespace Cribbage
 {
@@ -29,6 +30,7 @@ namespace Cribbage
             services.AddMvc();
 
             services.AddDbContext<CribbageContext>(options => options.UseSqlite("Data Source=Cribbage.sqlite"));
+            services.AddTransient<IGamesService, GamesService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
