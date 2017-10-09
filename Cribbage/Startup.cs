@@ -11,6 +11,7 @@ using Microsoft.Extensions.Options;
 using Microsoft.EntityFrameworkCore;
 
 using Cribbage.Models;
+using Cribbage.Middleware;
 
 namespace Cribbage
 {
@@ -39,6 +40,7 @@ namespace Cribbage
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseLogging();
             app.UseMvc();
         }
     }
