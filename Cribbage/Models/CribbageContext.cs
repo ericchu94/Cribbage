@@ -1,5 +1,4 @@
 using Microsoft.EntityFrameworkCore;
-using System.Collections.Generic;
 
 namespace Cribbage.Models
 {
@@ -10,5 +9,6 @@ namespace Cribbage.Models
         { }
 
         public DbSet<Game> Games { get; set; }
+        public DbSet<Player> Players { get; set; }
     }
 }
